@@ -1,77 +1,101 @@
-import React, { useEffect, useState } from "react";
-import DriftWall from "./../components/DriftWall";
+import React from "react";
+
+const projects = [
+  {
+    title: "Launch Identity",
+    category: "Branding",
+    description:
+      "A sharp visual identity built to give a fast-growing brand more clarity, confidence and memorability.",
+    image:
+      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    title: "Story Driven Campaign",
+    category: "Social media",
+    description:
+      "Creative-led social storytelling designed to shift attention into genuine engagement and recall.",
+    image:
+      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    title: "Digital Experience",
+    category: "Web design",
+    description:
+      "An editorial web presence designed to feel premium, clean and deeply aligned with the brand story.",
+    image:
+      "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80",
+  },
+];
 
 const Page3 = () => {
-  const items = [
-    {
-      image: "https://picsum.photos/id/1015/600/400",
-      title: "Peaks",
-      href: "https://example.com/one",
-    },
-    {
-      image: "https://picsum.photos/id/1025/600/400",
-      title: "Pup",
-      href: "https://example.com/two",
-    },
-    {
-      image: "https://picsum.photos/id/1039/600/400",
-      title: "Falls",
-      href: "https://example.com/three",
-    },
-  ];
-
-  const [wall, setWall] = useState({
-    columns: 10,
-    tileWidth: 200,
-    tileHeight: 300,
-    tilt: 16,
-  });
-
-  useEffect(() => {
-    const update = () => {
-      const w = window.innerWidth;
-      if (w < 640) {
-        setWall({ columns: 4, tileWidth: 140, tileHeight: 200, tilt: 10 });
-      } else if (w < 1024) {
-        setWall({ columns: 6, tileWidth: 170, tileHeight: 250, tilt: 14 });
-      } else {
-        setWall({ columns: 10, tileWidth: 200, tileHeight: 300, tilt: 16 });
-      }
-    };
-    update();
-    window.addEventListener("resize", update);
-    return () => window.removeEventListener("resize", update);
-  }, []);
-
   return (
-    <div className="flex w-full flex-col px-4 pt-8 sm:px-8 md:px-10">
-      <h1 className="mb-6 text-center font-[Britannic] text-4xl text-orange-500 sm:text-5xl md:mb-10 md:text-7xl lg:text-8xl">
-        Projects
-      </h1>
-      <div className="h-[55vh] w-full sm:h-[65vh] md:h-[75vh]">
-        <DriftWall
-          items={items}
-          columns={wall.columns}
-          tileWidth={wall.tileWidth}
-          tileHeight={wall.tileHeight}
-          gap={20}
-          tilt={wall.tilt}
-          turn={-14}
-          perspective={2000}
-          depth={200}
-          speed={20}
-          direction="up"
-          variance={0.45}
-          parallax={0.6}
-          lift={64}
-          fade={0.6}
-          dim={1}
-          overlayColor="#060010"
-          radius={14}
-          roll={0}
-          pauseOnHover={false}
-          grayscale={false}
-        />
+    <div className="w-full bg-[#141414] px-4 py-20 sm:px-8 md:px-12 lg:px-16">
+      <div className="mx-auto max-w-7xl">
+        <div className="mb-12 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p className="font-[Poppins] text-[10px] font-semibold uppercase tracking-[0.35em] text-orange-500">
+              Selected work
+            </p>
+            <h2 className="mt-4 font-[Britannic] text-[2.8rem] leading-[0.9] text-white sm:text-[4rem] md:text-[5rem] lg:text-[6rem]">
+              IDEAS.
+              <span className="block text-orange-500">EXECUTED.</span>
+              <span className="block">REMEMBERED.</span>
+            </h2>
+          </div>
+
+          <p className="max-w-md font-[Poppins] text-sm leading-7 text-white/75 sm:text-base">
+            Each project starts with a sharp idea and grows into a brand experience
+            people can feel, remember and share.
+          </p>
+        </div>
+
+        <div className="space-y-8">
+          {projects.map((project, index) => (
+            <article
+              key={project.title}
+              className={`overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.02] ${
+                index % 2 === 1 ? "lg:-translate-x-2" : ""
+              }`}
+            >
+              <div className="grid gap-0 lg:grid-cols-2">
+                <div className="overflow-hidden">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="h-72 w-full object-cover transition duration-500 hover:scale-105 sm:h-80 lg:h-full"
+                  />
+                </div>
+
+                <div className="flex flex-col justify-between p-6 sm:p-8 md:p-10">
+                  <div>
+                    <p className="font-[Poppins] text-[10px] font-semibold uppercase tracking-[0.3em] text-orange-500">
+                      {project.category}
+                    </p>
+                    <h3 className="mt-4 font-[Britannic] text-3xl text-white sm:text-4xl md:text-5xl">
+                      {project.title}
+                    </h3>
+                  </div>
+
+                  <p className="mt-6 max-w-lg font-[Poppins] text-sm leading-7 text-white/75 sm:text-base">
+                    {project.description}
+                  </p>
+
+                  <div className="mt-8 flex items-center justify-between border-t border-white/10 pt-4">
+                    <span className="font-[Poppins] text-[10px] uppercase tracking-[0.28em] text-white/60">
+                      Project {String(index + 1).padStart(2, "0")}
+                    </span>
+                    <a
+                      href="#contact"
+                      className="font-[Poppins] text-xs uppercase tracking-[0.2em] text-orange-500 transition hover:text-orange-400"
+                    >
+                      Enquire →
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
       </div>
     </div>
   );

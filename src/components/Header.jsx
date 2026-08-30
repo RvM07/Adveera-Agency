@@ -21,7 +21,7 @@ const Header = () => {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between md:h-20">
         <a
           href="#home"
-          className="shrink-0 text-3xl font-bold font-[Britannic] md:text-4xl lg:text-5xl"
+          className="shrink-0 font-[Britannic] text-3xl font-bold md:text-4xl lg:text-5xl"
           onClick={() => setIsOpen(false)}
         >
           <ShinyText
@@ -38,19 +38,19 @@ const Header = () => {
           />
         </a>
 
-        <nav className="hidden items-center gap-6 lg:gap-8 md:flex">
+        <nav className="hidden items-center gap-6 md:flex lg:gap-8">
           {navItems.map((item) => (
             <a
               key={item.label}
               href={item.href}
-              className="text-xs font-medium uppercase tracking-[0.18em] text-white transition hover:text-orange-500 lg:text-sm"
+              className="font-[Poppins] text-[10px] font-medium uppercase tracking-[0.22em] text-white transition hover:text-orange-500 lg:text-xs"
             >
               {item.label}
             </a>
           ))}
           <a
             href="#contact"
-            className="rounded-full bg-orange-500 px-4 py-2 text-xs font-semibold uppercase tracking-[0.14em] text-white transition hover:bg-orange-400 lg:px-5"
+            className="rounded-full bg-orange-500 px-4 py-2 font-[Poppins] text-[10px] font-semibold uppercase tracking-[0.18em] text-white transition hover:bg-orange-400 lg:px-5"
           >
             Contact
           </a>
@@ -80,7 +80,7 @@ const Header = () => {
                   key={item.label}
                   href={item.href}
                   onClick={() => setIsOpen(false)}
-                  className={`rounded-lg px-3 py-3 text-sm font-medium uppercase tracking-[0.18em] transition ${
+                  className={`rounded-lg px-3 py-3 font-[Poppins] text-sm font-medium uppercase tracking-[0.18em] transition ${
                     item.label === "Contact"
                       ? "bg-orange-500 text-white hover:bg-orange-400"
                       : "text-white hover:bg-white/5 hover:text-orange-500"

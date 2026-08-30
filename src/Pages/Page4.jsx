@@ -2,38 +2,38 @@ import React, { useState } from "react";
 
 const faqs = [
   {
-    question: "What services do you offer ?",
+    question: "What services do you offer?",
     answer:
-      "We provide end-to-end digital solutions including web design, development, branding, and product strategy tailored to your business needs.",
+      "We provide end-to-end digital solutions including branding, social media, websites, campaigns, visual content and creative strategy tailored to your business goals.",
   },
   {
-    question: "How long does a project take ?",
+    question: "How long does a project take?",
     answer:
-      "Project timelines vary based on scope and complexity, but most standard projects are completed within 2 to 6 weeks after we finalize the requirements.",
+      "Project timelines vary based on scope and complexity, but most standard engagements are completed within a focused working window after the brief is finalized.",
   },
   {
-    question: "Do you support custom requirements ?",
+    question: "Do you support custom requirements?",
     answer:
-      "Yes. We work closely with clients to create custom features, workflows, and design solutions that align with their goals and user experience needs.",
+      "Yes. We work closely with clients to create custom brand directions, marketing systems and digital experiences that match the needs of the business and the audience.",
   },
   {
-    question: "Can I request revisions after launch ?",
+    question: "Can I request revisions after launch?",
     answer:
-      "Absolutely. We offer post-launch support and revision rounds to help refine the experience and ensure the final product continues to work smoothly.",
+      "Absolutely. We support a collaborative process and can refine work through revision cycles to help the final execution feel aligned and effective.",
   },
 ];
 
 const AccordionItem = ({ item, isOpen, onToggle }) => (
-  <div className="border-b-2 border-orange-500">
+  <div className="border-b border-white/10">
     <button
       type="button"
       onClick={onToggle}
-      className="flex w-full items-center justify-between gap-4 py-4 text-left sm:py-5"
+      className="flex w-full items-center justify-between gap-4 py-5 text-left sm:py-6"
     >
-      <span className="text-base font-medium text-white sm:text-xl md:text-2xl">
+      <span className="font-[Poppins] text-base font-medium text-white sm:text-xl md:text-2xl">
         {item.question}
       </span>
-      <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-orange-500 text-2xl leading-none text-white sm:h-8 sm:w-8 sm:text-3xl">
+      <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-orange-500 text-2xl leading-none text-white">
         {isOpen ? "−" : "+"}
       </span>
     </button>
@@ -44,7 +44,7 @@ const AccordionItem = ({ item, isOpen, onToggle }) => (
       }`}
     >
       <div className="overflow-hidden">
-        <p className="pb-5 pr-2 text-sm leading-7 text-orange-500 sm:pr-10 sm:text-lg md:text-xl">
+        <p className="pb-5 pr-2 font-[Poppins] text-sm leading-7 text-white/75 sm:pr-10 sm:text-base md:text-lg">
           {item.answer}
         </p>
       </div>
@@ -56,22 +56,28 @@ const Page4 = () => {
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
-    <div className="w-full px-4 py-16 sm:px-8 md:px-16 md:py-24">
-      <div className="mb-10 text-center md:mb-14">
-        <h1 className="font-[Britannic] text-4xl text-orange-500 sm:text-5xl md:text-7xl lg:text-8xl">
-          FAQ
-        </h1>
-      </div>
+    <div className="w-full bg-[#141414] px-4 py-20 sm:px-8 md:px-12 lg:px-16">
+      <div className="mx-auto max-w-5xl">
+        <div className="mb-10 md:mb-14">
+          <p className="font-[Poppins] text-[10px] font-semibold uppercase tracking-[0.35em] text-orange-500">
+            FAQs
+          </p>
+          <h2 className="mt-4 font-[Britannic] text-[2.8rem] leading-[0.9] text-white sm:text-[4rem] md:text-[5rem] lg:text-[6rem]">
+            QUESTIONS,
+            <span className="block text-orange-500">CLEARLY ANSWERED.</span>
+          </h2>
+        </div>
 
-      <div className="mx-auto max-w-5xl rounded-3xl py-2 md:px-6 md:py-4">
-        {faqs.map((item, index) => (
-          <AccordionItem
-            key={item.question}
-            item={item}
-            isOpen={openIndex === index}
-            onToggle={() => setOpenIndex(openIndex === index ? -1 : index)}
-          />
-        ))}
+        <div className="rounded-[2rem] border border-white/10 bg-white/[0.02] p-3 sm:p-5 md:p-8">
+          {faqs.map((item, index) => (
+            <AccordionItem
+              key={item.question}
+              item={item}
+              isOpen={openIndex === index}
+              onToggle={() => setOpenIndex(openIndex === index ? -1 : index)}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
