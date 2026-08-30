@@ -1,4 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
 @import "tailwindcss";
+
+@font-face {
+  font-family: "Britannic";
+  src: local("Britannic"), local("Britannic Bold"), serif;
+  font-display: swap;
+}
+
+:root {
+  font-family: "Poppins", sans-serif;
+}
 
 html {
   scroll-behavior: smooth;
@@ -31,4 +42,17 @@ iframe,
 svg,
 video {
   max-width: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
 }
