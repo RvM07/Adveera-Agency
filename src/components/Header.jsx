@@ -16,7 +16,7 @@ const Header = () => {
   return (
     <header
       id="header"
-      className="fixed left-0 top-0 z-50 w-full bg-[#141414]/45 px-4 backdrop-blur-xl sm:px-6 md:px-10"
+      className="fixed left-0 top-0 z-50 w-full px-4 sm:px-6 md:px-10"
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between md:h-20">
         <a

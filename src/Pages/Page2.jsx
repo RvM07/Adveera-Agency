@@ -27,7 +27,7 @@ const Page2 = () => {
 
   return (
     <>
-      <div className="flex min-h-screen w-full flex-col items-start justify-center gap-10 bg-linear-to-t from-80% from-[#141518] to-orange-500 px-4 pb-20 pt-36 sm:px-8 sm:pt-40 md:px-12 md:pt-44 lg:flex-row lg:items-center lg:justify-between lg:gap-16 lg:px-16">
+      <div className="flex min-h-screen w-full flex-col items-start justify-center gap-10 bg-linear-to-t from-80% from-[#141518] to-orange-500 px-4 pb-20 sm:px-8 sm:pt-40 md:px-12 md:pt-44 lg:flex-row lg:items-center lg:justify-between lg:gap-16 lg:px-16">
         <h1 className="mt-4 shrink-0 font-[Britannic] text-4xl leading-none text-orange-500 sm:mt-6 sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
           Our Services
         </h1>
