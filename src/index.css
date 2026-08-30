@@ -21,6 +21,32 @@ body {
   background-color: #141518;
   color: #ffffff;
   overflow-x: hidden;
+  scrollbar-color: rgba(249, 115, 22, 0.8) #141518;
+  scrollbar-width: thin;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(249, 115, 22, 0.8) #141518;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #141518;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: rgba(249, 115, 22, 0.8);
+  border-radius: 9999px;
+  border: 2px solid #141518;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: rgba(249, 115, 22, 1);
 }
 
 #root {

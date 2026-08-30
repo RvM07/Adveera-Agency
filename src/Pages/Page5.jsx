@@ -86,7 +86,7 @@ const Page5 = () => {
             <div className="overflow-hidden rounded-2xl border border-white/10">
               <iframe
                 title="Google Maps"
-                src="https://www.google.com/maps?q=New%20York%20City&z=12&output=embed"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30241.842030820422!2d73.7401876!3d18.6536608!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b9f949f91c45%3A0xd75c57f09a936dc9!2sRavet%2C%20Pimpri-Chinchwad%2C%20Maharashtra%20412101!5e0!3m2!1sen!2sin!4v1788110877329!5m2!1sen!2sin"
                 className="h-56 w-full border-0 sm:h-72"
                 loading="lazy"
                 allowFullScreen
@@ -99,7 +99,7 @@ const Page5 = () => {
                   Visit us
                 </p>
                 <p className="mt-2 text-base font-medium sm:text-lg">
-                  120 Park Avenue, New York, NY
+                  Ravet, Pimpri-Chinchwad, Maharashtra 412101, India
                 </p>
               </div>
 

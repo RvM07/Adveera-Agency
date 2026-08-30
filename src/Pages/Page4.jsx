@@ -23,17 +23,17 @@ const faqs = [
   },
 ];
 
-const AccordionItem = ({ item, isOpen, onToggle }) => (
-  <div className="border-b border-white/10">
+const AccordionItem = ({ item, isOpen, onToggle, isLast }) => (
+  <div className={isLast ? "border-b-0" : "border-b border-white/10"}>
     <button
       type="button"
       onClick={onToggle}
       className="flex w-full items-center justify-between gap-4 py-5 text-left sm:py-6"
     >
-      <span className="font-[Poppins] text-base font-medium text-white sm:text-xl md:text-2xl">
+      <span className="font-[Poppins] text-xl font-medium text-white sm:text-2xl md:text-3xl">
         {item.question}
       </span>
-      <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-orange-500 text-2xl leading-none text-white">
+      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-orange-500 text-3xl leading-none text-white">
         {isOpen ? "−" : "+"}
       </span>
     </button>
@@ -44,7 +44,7 @@ const AccordionItem = ({ item, isOpen, onToggle }) => (
       }`}
     >
       <div className="overflow-hidden">
-        <p className="pb-5 pr-2 font-[Poppins] text-sm leading-7 text-white/75 sm:pr-10 sm:text-base md:text-lg">
+        <p className="pb-5 pr-2 font-[Poppins] text-lg leading-8 text-white/75 sm:pr-10 sm:text-xl md:text-2xl">
           {item.answer}
         </p>
       </div>
@@ -59,7 +59,7 @@ const Page4 = () => {
     <div className="w-full bg-[#141414] px-4 py-20 sm:px-8 md:px-12 lg:px-16">
       <div className="mx-auto max-w-5xl">
         <div className="mb-10 md:mb-14">
-          <p className="font-[Poppins] text-[10px] font-semibold uppercase tracking-[0.35em] text-orange-500">
+          <p className="font-[Poppins] text-base font-semibold uppercase tracking-[0.35em] text-orange-500 sm:text-lg md:text-xl">
             FAQs
           </p>
           <h2 className="mt-4 font-[Britannic] text-[2.8rem] leading-[0.9] text-white sm:text-[4rem] md:text-[5rem] lg:text-[6rem]">
@@ -74,6 +74,7 @@ const Page4 = () => {
               key={item.question}
               item={item}
               isOpen={openIndex === index}
+              isLast={index === faqs.length - 1}
               onToggle={() => setOpenIndex(openIndex === index ? -1 : index)}
             />
           ))}

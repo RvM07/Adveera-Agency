@@ -33,7 +33,7 @@ const Page3 = () => {
       <div className="mx-auto max-w-7xl">
         <div className="mb-12 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div>
-            <p className="font-[Poppins] text-[10px] font-semibold uppercase tracking-[0.35em] text-orange-500">
+            <p className="font-[Poppins] text-base font-semibold uppercase tracking-[0.35em] text-orange-500 sm:text-lg md:text-xl">
               Selected work
             </p>
             <h2 className="mt-4 font-[Britannic] text-[2.8rem] leading-[0.9] text-white sm:text-[4rem] md:text-[5rem] lg:text-[6rem]">
@@ -43,7 +43,7 @@ const Page3 = () => {
             </h2>
           </div>
 
-          <p className="max-w-md font-[Poppins] text-sm leading-7 text-white/75 sm:text-base">
+          <p className="max-w-md font-[Poppins] text-lg leading-8 text-white/75 sm:text-xl md:text-2xl">
             Each project starts with a sharp idea and grows into a brand experience
             people can feel, remember and share.
           </p>
@@ -68,7 +68,7 @@ const Page3 = () => {
 
                 <div className="flex flex-col justify-between p-6 sm:p-8 md:p-10">
                   <div>
-                    <p className="font-[Poppins] text-[10px] font-semibold uppercase tracking-[0.3em] text-orange-500">
+                    <p className="font-[Poppins] text-sm font-semibold uppercase tracking-[0.3em] text-orange-500 sm:text-base md:text-lg">
                       {project.category}
                     </p>
                     <h3 className="mt-4 font-[Britannic] text-3xl text-white sm:text-4xl md:text-5xl">
@@ -76,17 +76,17 @@ const Page3 = () => {
                     </h3>
                   </div>
 
-                  <p className="mt-6 max-w-lg font-[Poppins] text-sm leading-7 text-white/75 sm:text-base">
+                  <p className="mt-6 max-w-lg font-[Poppins] text-lg leading-8 text-white/75 sm:text-xl">
                     {project.description}
                   </p>
 
                   <div className="mt-8 flex items-center justify-between border-t border-white/10 pt-4">
-                    <span className="font-[Poppins] text-[10px] uppercase tracking-[0.28em] text-white/60">
+                    <span className="font-[Poppins] text-sm uppercase tracking-[0.28em] text-white/60 sm:text-base">
                       Project {String(index + 1).padStart(2, "0")}
                     </span>
                     <a
                       href="#contact"
-                      className="font-[Poppins] text-xs uppercase tracking-[0.2em] text-orange-500 transition hover:text-orange-400"
+                      className="font-[Poppins] text-base uppercase tracking-[0.2em] text-orange-500 transition hover:text-orange-400 sm:text-lg"
                     >
                       Enquire →
                     </a>

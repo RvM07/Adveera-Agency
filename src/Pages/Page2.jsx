@@ -65,7 +65,7 @@ const Page2 = () => {
     <div className="w-full bg-[#141414] text-white">
       <section className="px-4 pb-20 pt-28 sm:px-8 md:px-12 md:pt-32 lg:px-16">
         <div className="mx-auto max-w-7xl">
-          <p className="text-xs font-semibold uppercase tracking-[0.35em] text-orange-500">
+          <p className="text-base font-semibold uppercase tracking-[0.35em] text-orange-500 sm:text-lg md:text-xl">
             About Adveera
           </p>
 
@@ -79,14 +79,14 @@ const Page2 = () => {
             </div>
 
             <div className="lg:pb-6">
-              <p className="text-sm leading-7 text-white/80 sm:text-base md:text-lg">
+              <p className="text-lg leading-8 text-white/80 sm:text-xl md:text-2xl">
                 Adveera is a creative advertising agency where ideas meet strategy,
                 design and storytelling to build brands that stand apart.
               </p>
 
               <a
                 href="#contact"
-                className="mt-8 inline-flex items-center rounded-full bg-orange-500 px-5 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-white transition hover:bg-orange-400"
+                className="mt-8 inline-flex items-center rounded-full bg-orange-500 px-5 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-white transition hover:bg-orange-400 sm:text-base"
               >
                 Let's Talk →
               </a>
@@ -99,7 +99,7 @@ const Page2 = () => {
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-10 lg:grid-cols-[0.7fr_1.3fr] lg:items-start">
             <div>
-              <p className="text-xl font-semibold uppercase tracking-[0.35em] text-orange-500">
+              <p className="text-xl font-semibold uppercase tracking-[0.35em] text-orange-500 md:text-2xl">
                 Our Story
               </p>
             </div>
@@ -115,7 +115,8 @@ const Page2 = () => {
                 <span className="font-[Britannic] text-5xl text-orange-500 sm:text-6xl md:text-7xl">
                   2023
                 </span>
-                <p className="max-w-xl text-sm leading-7 text-white/75 sm:text-base">
+                <p className="max-w-xl text-base leading-8 text-white/75 sm:text-lg md:text-xl">
+
                   From a bold beginning, Adveera evolved into a creative advertising
                   agency combining ideas, strategy, design and storytelling into work
                   that feels both intentional and memorable.
@@ -135,7 +136,7 @@ const Page2 = () => {
             <span className="block text-orange-500">REMEMBER.</span>
           </h2>
 
-          <p className="mt-8 max-w-2xl text-sm leading-7 text-white/75 sm:text-base md:text-lg">
+          <p className="mt-8 max-w-2xl text-lg leading-8 text-white/75 sm:text-xl md:text-2xl">
             We look beyond the brief, find the idea and turn it into creative work
             that connects with people.
           </p>
@@ -145,7 +146,7 @@ const Page2 = () => {
       <section className="px-4 py-20 sm:px-8 md:px-12 lg:px-16">
         <div className="mx-auto max-w-7xl">
           <div className="mb-10">
-            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-orange-500">
+            <p className="text-base font-semibold uppercase tracking-[0.35em] text-orange-500 sm:text-lg md:text-xl">
               What We Believe
             </p>
           </div>
@@ -160,14 +161,14 @@ const Page2 = () => {
                   <span className="font-[Britannic] text-3xl text-orange-500 sm:text-4xl">
                     {item.number}
                   </span>
-                  <span className="text-xs font-semibold uppercase tracking-[0.2em] text-white/60">
+                  <span className="text-sm font-semibold uppercase tracking-[0.2em] text-white/60 sm:text-base">
                     {item.title}
                   </span>
                 </div>
                 <h3 className="mt-5 text-2xl font-semibold uppercase text-white sm:text-3xl">
                   {item.title}
                 </h3>
-                <p className="mt-4 text-sm leading-7 text-white/75 sm:text-base">
+                <p className="mt-4 text-base leading-8 text-white/75 sm:text-lg md:text-xl">
                   {item.text}
                 </p>
               </div>
@@ -179,7 +180,7 @@ const Page2 = () => {
       <section className="px-4 py-20 sm:px-8 md:px-12 lg:px-16">
         <div className="mx-auto max-w-7xl">
           <div className="mb-12">
-            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-orange-500">
+            <p className="text-base font-semibold uppercase tracking-[0.35em] text-orange-500 sm:text-lg md:text-xl">
               What We Do
             </p>
           </div>
@@ -192,14 +193,14 @@ const Page2 = () => {
                 className="group flex items-center justify-between gap-4 border-b border-white/10 py-4 transition duration-300 hover:border-orange-500/70"
               >
                 <div className="flex items-center gap-4 sm:gap-6">
-                  <span className="text-sm font-semibold uppercase tracking-[0.2em] text-orange-500">
+                  <span className="text-base font-semibold uppercase tracking-[0.2em] text-orange-500 sm:text-lg">
                     {String(index + 1).padStart(2, "0")}
                   </span>
                   <span className="text-xl font-medium uppercase text-white transition duration-300 group-hover:text-orange-500 sm:text-2xl md:text-3xl lg:text-4xl">
                     {item}
                   </span>
                 </div>
-                <span className="text-xl text-orange-500 transition duration-300 group-hover:translate-x-1">
+                <span className="text-2xl text-orange-500 transition duration-300 group-hover:translate-x-1">
                   →
                 </span>
               </a>
@@ -211,16 +212,16 @@ const Page2 = () => {
       <section className="px-4 py-20 sm:px-8 md:px-12 lg:px-16">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-            <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.02] p-3 sm:p-4">
+            <div className="mx-auto w-full max-w-[420px] overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.02] p-3 sm:p-4">
               <div className="relative overflow-hidden rounded-[1.5rem] border border-orange-500/40 bg-[#1b1b1b]">
                 <img
                   src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768,h=1026,fit=crop/YbN4wnoGwRC4rbqY/img_0836.jpg-FM6SJsV4qRZ9iiVA.jpeg"
                   alt="Pratiksha Mangrulkar, founder of Adveera"
-                  className="h-[420px] w-full object-cover object-top sm:h-[500px] md:h-[600px]"
+                  className="aspect-[3/4] w-full object-cover object-top"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#141414] via-transparent to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-6">
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.32em] text-orange-500">
+                  <p className="text-sm font-semibold uppercase tracking-[0.32em] text-orange-500 sm:text-base">
                     Founder & Creative Director
                   </p>
                   <h3 className="mt-3 font-[Britannic] text-2xl text-white sm:text-3xl">
@@ -231,7 +232,7 @@ const Page2 = () => {
             </div>
 
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.35em] text-orange-500">
+              <p className="text-base font-semibold uppercase tracking-[0.35em] text-orange-500 sm:text-lg md:text-xl">
                 The Founder
               </p>
               <p className="mt-6 text-lg leading-8 text-white/80 sm:text-xl md:text-2xl">
@@ -246,31 +247,33 @@ const Page2 = () => {
       </section>
 
       <section className="px-4 pb-20 sm:px-8 md:px-12 lg:px-16">
-        <div className="mx-auto max-w-7xl rounded-[2rem] border border-white/10 bg-white/[0.02] p-5 sm:p-8 md:p-10">
-          <div className="mb-8">
-            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-orange-500">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-10">
+            <p className="text-base font-semibold uppercase tracking-[0.35em] text-orange-500 sm:text-lg md:text-xl">
               Creative Team
             </p>
           </div>
 
           <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-            <div className="overflow-hidden rounded-[1.5rem] border border-orange-500/30 bg-[#181818]">
-              <img
-                src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768,h=1095,fit=crop/YbN4wnoGwRC4rbqY/passport-size-R1JuQrKcDh2K90uO.png"
-                alt="Adveera editor and post-production specialist"
-                className="h-72 w-full scale-[1.08] object-cover object-top sm:h-80 md:h-[28rem]"
-              />
+            <div className="mx-auto w-full max-w-[420px] overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.02] p-3 sm:p-4">
+              <div className="overflow-hidden rounded-[1.5rem] border border-orange-500/30 bg-[#181818]">
+                <img
+                  src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768,h=1095,fit=crop/YbN4wnoGwRC4rbqY/passport-size-R1JuQrKcDh2K90uO.png"
+                  alt="Adveera editor and post-production specialist"
+                  className="aspect-[3/4] w-full scale-[1.08] object-cover object-top"
+                />
+              </div>
             </div>
 
             <div>
-              <p className="text-[10px] font-semibold uppercase tracking-[0.32em] text-orange-500">
+              <p className="text-sm font-semibold uppercase tracking-[0.32em] text-orange-500 sm:text-base md:text-lg">
                 Editor & Post-Production
               </p>
               <h4 className="mt-4 font-[Britannic] text-3xl text-white sm:text-4xl md:text-5xl">
                 VIDEO EDITOR
               </h4>
 
-              <p className="mt-5 text-base leading-8 text-white/75 sm:text-lg">
+              <p className="mt-5 text-base leading-7 text-white/75 sm:text-lg md:text-xl">
                 A detail-driven visual storyteller with strong command over Adobe
                 Photoshop, Premiere Pro and After Effects. He brings rhythm, clarity
                 and cinematic polish to every frame, turning raw footage into stories
@@ -286,7 +289,7 @@ const Page2 = () => {
                 ].map((skill) => (
                   <span
                     key={skill}
-                    className="rounded-full border border-orange-500/40 bg-orange-500/10 px-3 py-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-orange-500"
+                    className="rounded-full border border-orange-500/40 bg-orange-500/10 px-3 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-orange-500 sm:text-sm"
                   >
                     {skill}
                   </span>
@@ -300,7 +303,7 @@ const Page2 = () => {
       <section className="px-4 py-20 sm:px-8 md:px-12 lg:px-16">
         <div className="mx-auto max-w-7xl">
           <div className="mb-12">
-            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-orange-500">
+            <p className="text-base font-semibold uppercase tracking-[0.35em] text-orange-500 sm:text-lg md:text-xl">
               How We Work
             </p>
           </div>
@@ -311,13 +314,13 @@ const Page2 = () => {
                 key={item.step}
                 className="rounded-2xl border border-white/10 bg-white/[0.02] p-5 transition duration-300 hover:border-orange-500/70 hover:bg-orange-500/5"
               >
-                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-orange-500">
+                <p className="text-base font-semibold uppercase tracking-[0.2em] text-orange-500 sm:text-lg">
                   {item.step}
                 </p>
                 <h3 className="mt-5 text-2xl font-semibold uppercase text-white">
                   {item.title}
                 </h3>
-                <p className="mt-4 text-sm leading-7 text-white/75">{item.text}</p>
+                <p className="mt-4 text-base leading-8 text-white/75 sm:text-lg">{item.text}</p>
               </div>
             ))}
           </div>
@@ -326,7 +329,7 @@ const Page2 = () => {
 
       <section className="px-4 pb-24 pt-12 sm:px-8 md:px-12 lg:px-16">
         <div className="mx-auto max-w-7xl rounded-[2rem] border border-orange-500/30 bg-orange-500/5 px-6 py-12 text-center sm:px-10 sm:py-16 lg:px-16">
-          <p className="text-xs font-semibold uppercase tracking-[0.35em] text-orange-500">
+          <p className="text-base font-semibold uppercase tracking-[0.35em] text-orange-500 sm:text-lg md:text-xl">
             Let’s Build Something Memorable
           </p>
           <h2 className="mt-5 font-[Britannic] text-[2.3rem] leading-[0.9] text-white sm:text-[4rem] md:text-[5rem] lg:text-[7rem]">
@@ -336,7 +339,7 @@ const Page2 = () => {
 
           <a
             href="#contact"
-            className="mt-8 inline-flex items-center rounded-full bg-orange-500 px-6 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-white transition hover:bg-orange-400"
+            className="mt-8 inline-flex items-center rounded-full bg-orange-500 px-6 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-white transition hover:bg-orange-400 sm:text-base"
           >
             Let's Talk →
           </a>
