@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import DriftWall from "./../components/DriftWall";
 
 const Page3 = () => {
@@ -20,19 +20,42 @@ const Page3 = () => {
     },
   ];
 
+  const [wall, setWall] = useState({
+    columns: 10,
+    tileWidth: 200,
+    tileHeight: 300,
+    tilt: 16,
+  });
+
+  useEffect(() => {
+    const update = () => {
+      const w = window.innerWidth;
+      if (w < 640) {
+        setWall({ columns: 4, tileWidth: 140, tileHeight: 200, tilt: 10 });
+      } else if (w < 1024) {
+        setWall({ columns: 6, tileWidth: 170, tileHeight: 250, tilt: 14 });
+      } else {
+        setWall({ columns: 10, tileWidth: 200, tileHeight: 300, tilt: 16 });
+      }
+    };
+    update();
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
+  }, []);
+
   return (
-    <>
-      <div className="w-full h-screen px-10">
-        <h1 className="text-8xl text-center -mt-20 mb-10 font-[Britannic] text-orange-500">
-          Projects
-        </h1>
+    <div className="flex w-full flex-col px-4 pt-8 sm:px-8 md:px-10">
+      <h1 className="mb-6 text-center font-[Britannic] text-4xl text-orange-500 sm:text-5xl md:mb-10 md:text-7xl lg:text-8xl">
+        Projects
+      </h1>
+      <div className="h-[55vh] w-full sm:h-[65vh] md:h-[75vh]">
         <DriftWall
           items={items}
-          columns={10}
-          tileWidth={200}
-          tileHeight={300}
+          columns={wall.columns}
+          tileWidth={wall.tileWidth}
+          tileHeight={wall.tileHeight}
           gap={20}
-          tilt={16}
+          tilt={wall.tilt}
           turn={-14}
           perspective={2000}
           depth={200}
@@ -50,7 +73,7 @@ const Page3 = () => {
           grayscale={false}
         />
       </div>
-    </>
+    </div>
   );
 };
 
